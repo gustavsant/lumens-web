@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Layout from "@/components/Layout";
+import PrintAmanda from "/lovable-uploads/amanda-baliana.png"
 
 const Portfolio = () => {
   // Real project
@@ -11,10 +12,11 @@ const Portfolio = () => {
     subtitle: "Psicóloga",
     category: "Site Institucional",
     description: "Criar um site acolhedor e profissional que transmitisse confiança para pacientes.",
-    solution: "Desenvolvimento de site institucional com design limpo, integração de formulário de contato e SEO básico.",
+    solution: "Desenvolvimento de site institucional com design limpo e SEO básico.",
     url: "www.amandabaliana.com",
-    image: "/api/placeholder/600/400",
-    tags: ["Psicologia", "Site Institucional", "SEO"]
+    image: PrintAmanda,
+    tags: ["Psicologia", "Site Institucional", "SEO"],
+    bgColor: "#334F40"
   };
 
   // Mock projects
@@ -70,22 +72,12 @@ const Portfolio = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Badge variant="secondary" className="mb-4">Projeto Destacado</Badge>
-              <h2 className="font-manrope text-3xl font-bold text-foreground mb-4">
-                Case de Sucesso
-              </h2>
             </div>
 
             <Card className="overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                <div className="bg-muted p-8 lg:p-12 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Users className="w-12 h-12 text-primary-foreground" />
-                    </div>
-                    <p className="font-inter text-muted-foreground">
-                      Projeto real em produção
-                    </p>
-                  </div>
+                <div className='flex' style={{backgroundColor: realProject.bgColor}}>
+                  <img src={realProject.image}  className="object-contain border" alt="" />
                 </div>
                 <div className="p-8 lg:p-12">
                   <div className="flex items-center gap-2 mb-4">
