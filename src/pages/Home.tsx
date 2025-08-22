@@ -133,9 +133,7 @@ const Home = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="font-manrope text-3xl lg:text-4xl font-bold mb-6">
-              Pronto para tirar seu projeto do papel?
-            </h2>
+            <h2 className="font-manrope text-3xl lg:text-4xl font-bold mb-6">Pronto para fazer sua marca brilhar online?</h2>
             <WhatsAppButton size="lg" variant="secondary" className="bg-card text-foreground hover:bg-card/90" />
           </div>
         </div>
