@@ -1,6 +1,4 @@
 import type { LucideIcon } from "lucide-react";
-import PrintAmanda from "/lovable-uploads/amanda-baliana.png";
-import PrintWords from "/lovable-uploads/words-ai.png"
 
 export type Project = {
   title: string;
@@ -25,7 +23,7 @@ export const projects: Project[] = [
     description:
       "Criar um site acolhedor e profissional que transmitisse confiança para pacientes.",
     tags: ["Psicologia", "Site Institucional", "SEO"],
-    image: PrintAmanda,
+    image: `${import.meta.env.BASE_URL}lovable-uploads/amanda-baliana.png`,
     bgColor: "#334F40",
     url: "www.amandabaliana.com",
     features: ["Design acolhedor", "SEO básico", "CMS leve"],
@@ -36,7 +34,7 @@ export const projects: Project[] = [
     category: "Landing page",
     description: "Landing page para um jogo da forca desenvolvido com IA.",
     tags: ["Jogo", "Android", "Landing page"],
-      image:PrintWords,
+      image: `${import.meta.env.BASE_URL}lovable-uploads/words-ai.png`,
     features: ["Redirecionamento para Play Store", "QR Code scan"],
       url: "www.words-ai.app",
   },

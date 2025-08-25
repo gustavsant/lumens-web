@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Logo and Copyright */}
           <div className="text-center md:text-left">
             <img
-              src="/lovable-uploads/logo-nobg.png"
+              src={`${import.meta.env.BASE_URL}lovable-uploads/logo-nobg.png`}
               alt="lumens Web"
               className="h-16 w-auto mx-auto md:mx-0 mb-4"
             />
