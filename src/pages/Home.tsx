@@ -35,7 +35,7 @@ const Home = () => {
     text: "Meu site ficou lindo e já comecei a receber clientes pelo Google!",
     author: "Cliente satisfeito"
   }, {
-    text: "Processo super rápido e direto. Recomendo a Lumen Web.",
+    text: "Processo super rápido e direto. Recomendo a lumens Web.",
     author: "Outro cliente"
   }];
   return <Layout>
@@ -82,7 +82,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="font-manrope text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Por que escolher a Lumen Web?
+              Por que escolher a Lumens Web?
             </h2>
           </div>
           
@@ -110,7 +110,7 @@ const Home = () => {
               Sobre nós
             </h2>
             <p className="font-inter text-lg text-muted-foreground">
-              Conheça a equipe por trás da Lumen Web
+              Conheça a equipe por trás da Lumens Web
             </p>
           </div>
           
