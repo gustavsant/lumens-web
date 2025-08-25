@@ -32,11 +32,11 @@ const Home = () => {
     icon: Users
   }];
   const testimonials = [{
-    text: "Meu site ficou lindo e já comecei a receber clientes pelo Google!",
-    author: "Cliente satisfeito"
-  }, {
-    text: "Processo super rápido e direto. Recomendo a lumens Web.",
-    author: "Outro cliente"
+      text: `Só tenho a agradecer ao Gustavo pela paciência 
+      e pela qualidade do trabalho, se você procura alguém que 
+      escute o que você quer no seu site e também saiba orientar
+      e sabe o que fazer, esse cara é ele!`,
+      author: "Amanda (amandabaliana.com)"
   }];
   return <Layout>
       {/* Hero Section */}
@@ -85,7 +85,7 @@ const Home = () => {
               Por que escolher a Lumens Web?
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {differentials.map((differential, index) => <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
@@ -113,7 +113,7 @@ const Home = () => {
               Conheça a equipe por trás da Lumens Web
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Gustavo */}
             <Card className="p-6 text-center">
@@ -126,7 +126,7 @@ const Home = () => {
                   Gustavo
                 </h3>
                 <p className="font-inter text-muted-foreground">
-                  Desenvolvedor full-stack apaixonado por criar soluções digitais que fazem a diferença. 
+                  Desenvolvedor full-stack apaixonado por criar soluções digitais que fazem a diferença.
                   Especialista em desenvolvimento web moderno e otimização de performance.
                 </p>
               </CardContent>
@@ -143,7 +143,7 @@ const Home = () => {
                   Gabriel
                 </h3>
                 <p className="font-inter text-muted-foreground">
-                  Designer e desenvolvedor front-end focado em experiência do usuário. 
+                  Designer e desenvolvedor front-end focado em experiência do usuário.
                   Transforma ideias em interfaces bonitas e funcionais que encantam os usuários.
                 </p>
               </CardContent>
@@ -160,7 +160,7 @@ const Home = () => {
               O que nossos clientes dizem
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {testimonials.map((testimonial, index) => <Card key={index} className="p-6">
                 <CardContent className="pt-0">
