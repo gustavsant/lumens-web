@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Layout from "@/components/Layout";
+import { sendContactMessage } from "@/lib/contact";
 
 const Contato = () => {
   const [formData, setFormData] = useState({
@@ -31,23 +32,27 @@ const Contato = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      await sendContactMessage(formData);
 
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve. Obrigado!",
-    });
+      toast({
+        title: "Mensagem enviada!",
+        description: "Entraremos em contato em breve. Obrigado!",
+      });
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      whatsapp: "",
-      message: ""
-    });
-
-    setIsSubmitting(false);
+      // Reset form
+      setFormData({ name: "", email: "", whatsapp: "", message: "" });
+    } catch (err: any) {
+      console.error(err);
+      toast({
+        title: "Não foi possível enviar",
+        description:
+          err?.message ||
+          "Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
