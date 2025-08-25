@@ -10,8 +10,8 @@ const Home = () => {
     description: "Para empresas e profissionais que querem presença online sólida.",
     icon: Users
   }, {
-    title: "Loja Virtual",
-    description: "E-commerces com checkout seguro e integração com meios de pagamento.",
+    title: "Criação de Sistemas",
+    description: "Sistemas web personalizados para automatizar processos do seu negócio.",
     icon: ArrowRight
   }, {
     title: "Landing Page",
@@ -98,6 +98,56 @@ const Home = () => {
                   {differential.description}
                 </p>
               </div>)}
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="font-manrope text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              Sobre nós
+            </h2>
+            <p className="font-inter text-lg text-muted-foreground">
+              Conheça a equipe por trás da Lumen Web
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Gustavo */}
+            <Card className="p-6 text-center">
+              <CardContent className="pt-6">
+                <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Users className="w-16 h-16 text-muted-foreground" />
+                  <span className="sr-only">Foto do Gustavo</span>
+                </div>
+                <h3 className="font-manrope text-2xl font-bold text-foreground mb-3">
+                  Gustavo
+                </h3>
+                <p className="font-inter text-muted-foreground">
+                  Desenvolvedor full-stack apaixonado por criar soluções digitais que fazem a diferença. 
+                  Especialista em desenvolvimento web moderno e otimização de performance.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Gabriel */}
+            <Card className="p-6 text-center">
+              <CardContent className="pt-6">
+                <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Users className="w-16 h-16 text-muted-foreground" />
+                  <span className="sr-only">Foto do Gabriel</span>
+                </div>
+                <h3 className="font-manrope text-2xl font-bold text-foreground mb-3">
+                  Gabriel
+                </h3>
+                <p className="font-inter text-muted-foreground">
+                  Designer e desenvolvedor front-end focado em experiência do usuário. 
+                  Transforma ideias em interfaces bonitas e funcionais que encantam os usuários.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

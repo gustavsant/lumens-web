@@ -8,19 +8,19 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Brand Colors - Based on Lumen Web logo */
-    --lumen-gold: 42 95% 42%;      /* #D49C04 - Primary brand color */
-    --lumen-gold-light: 42 90% 50%; /* Lighter variant */
-    --lumen-gold-dark: 42 95% 35%;  /* Darker variant */
+    /* Brand Colors - Based on updated Lumen Web logo */
+    --lumen-gold: 42 88% 55%;      /* Warmer, more vibrant gold */
+    --lumen-gold-light: 42 82% 65%; /* Lighter variant */
+    --lumen-gold-dark: 42 95% 45%;  /* Darker variant for contrast */
     
     /* Text Colors */
-    --text-primary: 50 4% 22%;      /* #3B3A37 - Primary text */
-    --text-secondary: 50 4% 45%;    /* Muted text */
+    --text-primary: 35 25% 25%;      /* Warmer brown text */
+    --text-secondary: 35 15% 50%;    /* Muted warm text */
     
     /* Background Colors */
-    --cream-base: 42 25% 90%;       /* #EDE8DC - Main background */
-    --cream-light: 42 50% 95%;      /* #FAF7EF - Light surfaces */
-    --cream-white: 0 0% 100%;       /* Pure white for cards */
+    --cream-base: 42 35% 92%;       /* Warmer cream background */
+    --cream-light: 42 45% 96%;      /* Very light warm surfaces */
+    --cream-white: 42 20% 98%;      /* Warm white for cards */
     
     /* Semantic Design System */
     --background: var(--cream-base);

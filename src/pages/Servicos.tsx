@@ -17,14 +17,14 @@ const Servicos = () => {
       icon: Users,
     },
     {
-      title: "Loja Virtual",
-      description: "Catálogo, carrinho e checkout integrados para vender online.",
+      title: "Criação de Sistemas",
+      description: "Sistemas web personalizados para automatizar processos do seu negócio.",
       details: [
-        "Catálogo de produtos completo",
-        "Carrinho de compras intuitivo",
-        "Integração com meios de pagamento",
-        "Painel administrativo",
-        "Controle de estoque"
+        "Sistemas sob medida",
+        "Automação de processos",
+        "Integração com APIs",
+        "Painel administrativo completo",
+        "Banco de dados otimizado"
       ],
       icon: ShoppingCart,
     },
