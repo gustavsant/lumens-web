@@ -26,6 +26,16 @@ jobs:
           node-version: 20
           cache: 'npm'
 
+      - name: Set base path for Pages
+        run: |
+          if [ -f CNAME ]; then
+            echo "Detected CNAME. Using root base path '/' for custom domain."
+            echo "PUBLIC_BASE_PATH=/" >> $GITHUB_ENV
+          else
+            echo "No CNAME found. Using repo base path '/${{ github.event.repository.name }}/'."
+            echo "PUBLIC_BASE_PATH=/${{ github.event.repository.name }}/" >> $GITHUB_ENV
+          fi
+
       - name: Install dependencies
         run: npm ci
 
@@ -36,8 +46,12 @@ jobs:
           VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
           VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
           VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
-          # Override base path dynamically to repo name
-          PUBLIC_BASE_PATH: /${{ github.event.repository.name }}/
+
+      - name: Include CNAME in artifact (if present)
+        run: |
+          if [ -f CNAME ]; then
+            cp CNAME dist/CNAME
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -54,4 +68,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
