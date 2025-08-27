@@ -5,8 +5,6 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Use clean URLs locally, and compute base for GitHub Pages in CI via PUBLIC_BASE_PATH
-  base: mode === "development" ? "/" : (process.env.PUBLIC_BASE_PATH || "/lumens-web/"),
   server: {
     host: "::",
     port: 8080,
