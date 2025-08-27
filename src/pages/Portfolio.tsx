@@ -3,8 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Layout from "@/components/Layout";
-import amandaImage from './../../public/lovable-uploads/amanda_printscreen.png';
-import wordsImage from './../../public/lovable-uploads/words-printscreen.png';
+import amandaImage from '/lovable-uploads/amanda_printscreen.png';
+import wordsImage from '/lovable-uploads/words-printscreen.png';
 
 
 const Portfolio = () => {
