@@ -140,7 +140,7 @@ const Contato = () => {
                       value={formData.whatsapp}
                       onChange={handleInputChange}
                       className="font-inter"
-                      placeholder="(11) 99999-9999"
+                      placeholder="(84) 98867-6426"
                     />
                   </div>
 

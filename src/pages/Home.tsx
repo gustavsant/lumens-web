@@ -44,13 +44,9 @@ const Home = () => {
 
   const testimonials = [
     {
-      text: "Meu site ficou lindo e já comecei a receber clientes pelo Google!",
-      author: "Cliente satisfeito",
-    },
-    {
-      text: "Processo super rápido e direto. Recomendo a Lumen Web.",
-      author: "Outro cliente",
-    },
+      text: "Só tenho a agradecer ao Gustavo pela paciência e pela qualidade do trabalho, se você procura alguém que escute o que você quer no seu site e também saiba orientar e sabe o que fazer, esse cara é ele!",
+      author: "Amanda Baliana (www.amandabaliana.com)",
+    }
   ];
 
   return (
@@ -60,11 +56,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-manrope text-4xl lg:text-6xl font-bold text-foreground mb-6">
-              Sites rápidos, bonitos e feitos para vender
+              Iluminando sua presença digital.
             </h1>
             <p className="font-inter text-lg lg:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Na Lumen Web criamos sites institucionais, lojas virtuais e landing pages 
-              pensadas para performance, SEO e conversão.
+              Ajudamos a transformar ideias em sites que brilham ✨
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <WhatsAppButton size="lg" />
@@ -123,6 +118,55 @@ const Home = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+       {/* About Us Section */}
+      <section className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="font-manrope text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              Sobre nós
+            </h2>
+            <p className="font-inter text-lg text-muted-foreground">
+              Conheça a equipe por trás da Lumen Web
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Gustavo */}
+            <Card className="p-6 text-center">
+              <CardContent className="pt-6">
+                <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Users className="w-16 h-16 text-muted-foreground" />
+                  <span className="sr-only">Foto do Gustavo</span>
+                </div>
+                <h3 className="font-manrope text-2xl font-bold text-foreground mb-3">
+                  Gustavo
+                </h3>
+                <p className="font-inter text-muted-foreground">
+                  Desenvolvedor full-stack apaixonado por criar soluções digitais que fazem a diferença. 
+                  Especialista em desenvolvimento web moderno e otimização de performance.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Gabriel */}
+            <Card className="p-6 text-center">
+              <CardContent className="pt-6">
+                <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Users className="w-16 h-16 text-muted-foreground" />
+                  <span className="sr-only">Foto do Gabriel</span>
+                </div>
+                <h3 className="font-manrope text-2xl font-bold text-foreground mb-3">
+                  Gabriel
+                </h3>
+                <p className="font-inter text-muted-foreground">
+                  Designer e desenvolvedor front-end focado em experiência do usuário. 
+                  Transforma ideias em interfaces bonitas e funcionais que encantam os usuários.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

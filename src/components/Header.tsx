@@ -19,19 +19,19 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-1">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex w-auto flex-1 items-center">
             <img
-              src="/lovable-uploads/d39be029-0eb5-4362-a168-12188b4e8be2.png"
+              src="/lovable-uploads/logo-nobg.png"
               alt="Lumen Web - Agência de Criação de Sites"
-              className="h-10 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden flex-1 md:flex justify-center items-center space-x-8">
             {menuItems.map((item) => (
               <Link
                 key={item.path}
@@ -46,7 +46,7 @@ const Header = () => {
           </nav>
 
           {/* Desktop WhatsApp Button */}
-          <div className="hidden md:block">
+          <div className="flex-1 hidden justify-end items-end md:flex">
             <WhatsAppButton size="sm" variant="outline" />
           </div>
 

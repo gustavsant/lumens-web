@@ -17,9 +17,9 @@ const Footer = () => {
           {/* Logo and Copyright */}
           <div className="text-center md:text-left">
             <img
-              src="/lovable-uploads/d39be029-0eb5-4362-a168-12188b4e8be2.png"
+              src="/lovable-uploads/logo.png"
               alt="Lumen Web"
-              className="h-8 w-auto mx-auto md:mx-0 mb-4"
+              className="h-16 w-auto mx-auto md:mx-0 mb-4"
             />
             <p className="text-sm text-muted-foreground">
               © {currentYear} Lumen Web. Todos os direitos reservados.
@@ -43,7 +43,7 @@ const Footer = () => {
         {/* Social Media Placeholders */}
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-xs text-muted-foreground">
-            Siga-nos nas redes sociais: Instagram | LinkedIn | Facebook
+            Siga-nos nas redes sociais: <a href="https://www.instagram.com/lumensweb/" target="_blank">Instagram</a> | <a href="https://www.linkedin.com/in/gustavsant/" target="_blank">LinkedIn</a> | <a href="https://www.facebook.com/people/Lumens-Web/61579709764506/" target="_blank">Facebook</a>
           </p>
         </div>
       </div>

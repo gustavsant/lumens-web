@@ -1,4 +1,4 @@
-import { Users, ShoppingCart, Target, TrendingUp } from "lucide-react";
+import { Users, Settings, Target, TrendingUp } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Layout from "@/components/Layout";
 
@@ -17,16 +17,16 @@ const Servicos = () => {
       icon: Users,
     },
     {
-      title: "Loja Virtual",
-      description: "Catálogo, carrinho e checkout integrados para vender online.",
+      title: "Sistemas",
+      description: "Automações, sistemas personalizados",
       details: [
-        "Catálogo de produtos completo",
-        "Carrinho de compras intuitivo",
-        "Integração com meios de pagamento",
+        "Sistemas personalizados",
+        "Automação de processos",
+        "Integração com APIs",
         "Painel administrativo",
-        "Controle de estoque"
+        "Escalabilidade e manutenção"
       ],
-      icon: ShoppingCart,
+      icon: Settings,
     },
     {
       title: "Landing Page",

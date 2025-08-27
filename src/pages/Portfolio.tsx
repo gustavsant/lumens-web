@@ -3,19 +3,35 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Layout from "@/components/Layout";
+import amandaImage from './../../public/lovable-uploads/amanda_printscreen.png';
+import wordsImage from './../../public/lovable-uploads/words-printscreen.png';
+
 
 const Portfolio = () => {
   // Real project
-  const realProject = {
-    title: "Amanda Baliana",
-    subtitle: "Psicóloga",
-    category: "Site Institucional",
-    description: "Criar um site acolhedor e profissional que transmitisse confiança para pacientes.",
-    solution: "Desenvolvimento de site institucional com design limpo, integração de formulário de contato e SEO básico.",
-    url: "www.amandabaliana.com",
-    image: "/api/placeholder/600/400",
-    tags: ["Psicologia", "Site Institucional", "SEO"]
-  };
+  const projects = [
+    {
+      title: "Amanda Baliana",
+      subtitle: "Psicóloga",
+      category: "Site Institucional",
+      description: "Criar um site acolhedor e profissional que transmitisse confiança para pacientes.",
+      solution: "Desenvolvimento de site institucional com design limpo, integração de formulário de contato e SEO básico.",
+      url: "www.amandabaliana.com",
+      image: amandaImage,
+      tags: ["Psicologia", "Site Institucional", "SEO"]
+    },
+    {
+      title: "Words AI",
+      subtitle: "Jogo mobile",
+      category: "Landing page",
+      description: "Landing page para um jogo da forca desenvolvido com IA.",
+      tags: ["Jogo", "Android", "Landing page"],
+      image: wordsImage,
+      features: ["Redirecionamento para Play Store", "QR Code scan"],
+      url: "www.words-ai.app",
+    }
+  ]
+
 
   // Mock projects
   const mockProjects = [
@@ -67,54 +83,44 @@ const Portfolio = () => {
       {/* Featured Real Project */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          {projects.map((project, index) => (
+                      <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <Badge variant="secondary" className="mb-4">Projeto Destacado</Badge>
-              <h2 className="font-manrope text-3xl font-bold text-foreground mb-4">
-                Case de Sucesso
-              </h2>
             </div>
 
             <Card className="overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                <div className="bg-muted p-8 lg:p-12 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Users className="w-12 h-12 text-primary-foreground" />
-                    </div>
-                    <p className="font-inter text-muted-foreground">
-                      Projeto real em produção
-                    </p>
-                  </div>
+                <div className="bg-muted flex items-center justify-center">
+                  <img src={project.image} alt="Amanda Site Imagem" className="object-cover w-full h-full" />
                 </div>
                 <div className="p-8 lg:p-12">
                   <div className="flex items-center gap-2 mb-4">
-                    <Badge variant="outline">{realProject.category}</Badge>
+                    <Badge variant="outline">{project.category}</Badge>
                   </div>
                   <CardTitle className="font-manrope text-2xl font-bold mb-2">
-                    {realProject.title}
+                    {project.title}
                   </CardTitle>
                   <p className="font-inter text-muted-foreground mb-4">
-                    {realProject.subtitle}
+                    {project.subtitle}
                   </p>
                   
                   <div className="space-y-4 mb-6">
                     <div>
                       <h4 className="font-inter font-semibold mb-2">Desafio:</h4>
                       <p className="font-inter text-sm text-muted-foreground">
-                        {realProject.description}
+                        {project.description}
                       </p>
                     </div>
                     <div>
                       <h4 className="font-inter font-semibold mb-2">Solução:</h4>
                       <p className="font-inter text-sm text-muted-foreground">
-                        {realProject.solution}
+                        {project.solution}
                       </p>
                     </div>
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {realProject.tags.map((tag, index) => (
+                    {project.tags.map((tag, index) => (
                       <Badge key={index} variant="secondary" className="text-xs">
                         {tag}
                       </Badge>
@@ -123,7 +129,7 @@ const Portfolio = () => {
 
                   <Button asChild className="w-full">
                     <a
-                      href={`https://${realProject.url}`}
+                      href={`https://${project.url}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -135,65 +141,8 @@ const Portfolio = () => {
               </div>
             </Card>
           </div>
-        </div>
-      </section>
+          ))}
 
-      {/* Mock Projects */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-manrope text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Outros projetos
-              </h2>
-              <p className="font-inter text-lg text-muted-foreground">
-                Exemplos de soluções que desenvolvemos
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {mockProjects.map((project, index) => (
-                <Card key={index} className="hover:shadow-xl transition-shadow duration-300">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                      <project.icon className="w-8 h-8 text-primary-foreground" />
-                    </div>
-                    <Badge variant="outline" className="mb-2">{project.category}</Badge>
-                    <CardTitle className="font-manrope text-xl font-bold">
-                      {project.title}
-                    </CardTitle>
-                    <p className="font-inter text-sm text-muted-foreground">
-                      {project.subtitle}
-                    </p>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="font-inter text-sm text-muted-foreground mb-4">
-                      {project.description}
-                    </p>
-                    
-                    <div className="space-y-2 mb-4">
-                      {project.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-start">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" />
-                          <span className="font-inter text-xs text-muted-foreground">
-                            {feature}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="flex flex-wrap gap-1">
-                      {project.tags.map((tag, tagIndex) => (
-                        <Badge key={tagIndex} variant="secondary" className="text-xs">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
     </Layout>
