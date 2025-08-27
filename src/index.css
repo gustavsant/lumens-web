@@ -2,41 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Lumen Web Design System - Clean, modern, and professional 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand Colors - Based on Lumen Web logo */
+    --lumen-gold: 42 95% 42%;      /* #D49C04 - Primary brand color */
+    --lumen-gold-light: 42 90% 50%; /* Lighter variant */
+    --lumen-gold-dark: 42 95% 35%;  /* Darker variant */
+    
+    /* Text Colors */
+    --text-primary: 50 4% 22%;      /* #3B3A37 - Primary text */
+    --text-secondary: 50 4% 45%;    /* Muted text */
+    
+    /* Background Colors */
+    --cream-base: 42 25% 90%;       /* #EDE8DC - Main background */
+    --cream-light: 42 50% 95%;      /* #FAF7EF - Light surfaces */
+    --cream-white: 0 0% 100%;       /* Pure white for cards */
+    
+    /* Semantic Design System */
+    --background: var(--cream-base);
+    --foreground: var(--text-primary);
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: var(--cream-white);
+    --card-foreground: var(--text-primary);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: var(--cream-white);
+    --popover-foreground: var(--text-primary);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--lumen-gold);
+    --primary-foreground: var(--cream-white);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--cream-light);
+    --secondary-foreground: var(--text-primary);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: var(--cream-light);
+    --muted-foreground: var(--text-secondary);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--lumen-gold-light);
+    --accent-foreground: var(--cream-white);
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: var(--cream-white);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 42 20% 85%;
+    --input: var(--cream-white);
+    --ring: var(--lumen-gold);
 
-    --radius: 0.5rem;
+    --radius: 8px;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +115,25 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    font-size: 16px; /* Accessibility: minimum 16px */
+  }
+  
+  /* Typography System */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-manrope font-semibold text-foreground;
+  }
+  
+  .font-manrope {
+    font-family: 'Manrope', sans-serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Custom focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2;
   }
 }
