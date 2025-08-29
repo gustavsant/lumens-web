@@ -18,11 +18,11 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <img
               src="/lovable-uploads/logo.png"
-              alt="Lumen Web"
+              alt="Lumens Web"
               className="h-16 w-auto mx-auto md:mx-0 mb-4"
             />
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Lumen Web. Todos os direitos reservados.
+              © {currentYear} Lumens Web. Todos os direitos reservados.
             </p>
           </div>
 

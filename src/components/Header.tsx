@@ -25,7 +25,7 @@ const Header = () => {
           <Link to="/" className="flex w-auto flex-1 items-center">
             <img
               src="/lovable-uploads/logo-nobg.png"
-              alt="Lumen Web - Agência de Criação de Sites"
+              alt="Lumens Web - Agência de Criação de Sites"
               className="h-20 w-auto"
             />
           </Link>

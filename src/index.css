@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Lumen Web Design System - Clean, modern, and professional 
+/* Lumens Web Design System - Clean, modern, and professional 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Brand Colors - Based on updated Lumen Web logo */
+    /* Brand Colors - Based on updated Lumens Web logo */
     --lumen-gold: 42 88% 55%;      /* Warmer, more vibrant gold */
     --lumen-gold-light: 42 82% 65%; /* Lighter variant */
     --lumen-gold-dark: 42 95% 45%;  /* Darker variant for contrast */

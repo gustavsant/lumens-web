@@ -8,6 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Layout from "@/components/Layout";
+import emailjs from "emailjs-com"
+import process from "process";
 
 const Contato = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +21,7 @@ const Contato = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = async (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -30,24 +32,39 @@ const Contato = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    console.log(formData)
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      // Chamada ao EmailJS
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,   // coloque o ID do serviço
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,  // coloque o ID do template
+        formData,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY    // coloque sua public key
+      );
 
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve. Obrigado!",
-    });
+      toast({
+        title: "Mensagem enviada!",
+        description: "Entraremos em contato em breve. Obrigado!",
+      });
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      whatsapp: "",
-      message: ""
-    });
-
-    setIsSubmitting(false);
+      // Resetar formulário
+      setFormData({
+        name: "",
+        email: "",
+        whatsapp: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error("Erro ao enviar mensagem:", error);
+      toast({
+        title: "Erro!",
+        description: "Não foi possível enviar sua mensagem. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

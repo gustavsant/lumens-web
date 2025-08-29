@@ -17,7 +17,7 @@ const WhatsAppButton = ({
 }: WhatsAppButtonProps) => {
   const handleWhatsAppClick = () => {
     // Placeholder WhatsApp number - replace with actual number
-    const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços da Lumen Web.");
+    const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços da Lumens Web.");
     const whatsappNumber = "5584988676426"; // Replace with actual number
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
     window.open(whatsappUrl, "_blank");
